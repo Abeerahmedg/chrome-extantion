@@ -1,0 +1,36 @@
+for (let i = 0; i < myLeads.length; i++){
+   
+    listItems+= "<li>" + myLeads[i] + "</li>"
+     // create element
+    // set text content
+    // append to ul , this another way to do it:
+    // const li = document.createElement("li")
+    // li.textContent = myLeads[i]
+    // ulEl.append(li)
+}
+ulEl.innerHTML = listItems 
+}
+// myLeads = JSON.parse(myLeads)
+// myLeads = JSON.stringify(myLeads)
+// console.log(typeof myLeads)
+
+to get it in the storage
+// localStorage.setItem("myName", "Abeer")
+// console.log( localStorage.getItem("myName") )
+// localStorage.clear()
+// HINTS:
+// localStorage.setItem(key, value)
+// localStorage.getItem(key)
+// localStorage.clear()
+// PS: both key and value need to be strings
+
+let myLeads = `["www.awesomelead.com"]`
+
+// 1. Turn the myLeads string into an array
+myLeads = JSON.parse(myLeads)
+// 2. Push a new value to the array
+myLeads.push("www.lead2.com")
+// 3. Turn the array into a string again
+myLeads = JSON.stringify(myLeads)
+// 4. Console.log the string using typeof to verify that it's a string
+console.log(typeof myLeads)
